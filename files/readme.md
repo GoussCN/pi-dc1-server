@@ -11,3 +11,8 @@
 
 2、sudo bash pi-dc1-server.sh uninstall
 
+命令
+-----------------------------
+查看状态 systemctl status dc1server.service
+启动服务 systemctl start dc1server.service
+停止服务 systemctl status dc1server.service
