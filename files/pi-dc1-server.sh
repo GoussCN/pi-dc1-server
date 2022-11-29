@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-JAR_URL="https://github.com/GoussCN/pi-dc1-server/tree/main/files/dc1server.jar"
-SERVICE_URL="https://github.com/GoussCN/pi-dc1-server/tree/main/files/dc1server.service"
+JAR_URL="https://raw.githubusercontent.com/GoussCN/pi-dc1-server/main/files/dc1server.jar"
+SERVICE_URL="https://raw.githubusercontent.com/GoussCN/pi-dc1-server/main/files/dc1server.service"
 
 #手动下载文件信息提示
 function echoManualDownloadInfo(){
@@ -30,7 +30,7 @@ function autoStart(){
     systemctl status dc1server.service
     echo ""
     echoGreenInfo "脚本执行完成，可输入命令 systemctl status dc1server.service 查看状态"
-    echoGreenInfo "手机apk请到 https://github.com/GoussCN/pi-dc1-server/tree/main/files 下载"
+    echoGreenInfo "手机apk请到 https://github.com/GoussCN/pi-dc1-server/tree/main/apk 下载"
 }
 
 #安装jdk，部署开机启动服务
