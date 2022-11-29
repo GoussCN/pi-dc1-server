@@ -17,4 +17,4 @@
 
 启动服务 systemctl start dc1server.service
 
-停止服务 systemctl status dc1server.service
+停止服务 systemctl stop dc1server.service
