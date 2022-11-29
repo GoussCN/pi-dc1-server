@@ -6,7 +6,7 @@ SERVICE_URL="https://raw.githubusercontent.com/ZXQ-Kyle/N1Script/master/Files/dc
 #手动下载文件信息提示
 function echoManualDownloadInfo(){
     echo -e "\033[31m 文件下载失败，请登陆网页 https://github.com/ZXQ-Kyle/N1Script/tree/master/Files 手动下载 \033[0m"
-    echo -e "\033[31m 手动下载文件并放置到/opt/目录下，再执行该脚本 \033[0m"
+    echo -e "\033[31m 手动下载文件并放置到/opt/dc1server/目录下，再执行该脚本 \033[0m"
     echo -e "\033[31m 共需下载两个文件 dc1server.jar和dc1server.service \033[0m"
 }
 
