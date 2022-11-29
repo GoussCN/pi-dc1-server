@@ -87,6 +87,7 @@ function uninstall() {
     rm -f /opt/dc1server.jar
     rm -f /etc/systemd/system/dc1server.service
     echoGreenInfo "卸载完成！"
+    echoGreenInfo "请手动删除/opt/目录下的dc1.conf和dc1_database.db的记录文件。"
 }
 
 
