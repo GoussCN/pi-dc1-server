@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-JAR_URL="https://github.com/GoussCN/pi-dc1-server/tree/main/files/dc1server.jar"
-SERVICE_URL="https://github.com/GoussCN/pi-dc1-server/tree/main/files/dc1server.service"
+JAR_URL="https://raw.githubusercontent.com/GoussCN/pi-dc1-server/main/files/dc1server.jar"
+SERVICE_URL="https://raw.githubusercontent.com/GoussCN/pi-dc1-server/main/files/dc1server.service"
 
 #手动下载文件信息提示
 function echoManualDownloadInfo(){
