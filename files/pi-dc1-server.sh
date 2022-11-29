@@ -44,11 +44,11 @@ function install(){
 	if test -e /opt/dc1server/dc1server.jar
 	then
 	    echo ""
-	    echo -n  "是否删除原/opt/dc1server.jar，重新下载？【Y/N】"
+	    echo -n  "是否删除原/opt/dc1server/dc1server.jar，重新下载？【Y/N】"
         read  deleteOriJarFile
         if [[ ${deleteOriJarFile} == "Y" || ${deleteOriJarFile} == "y" ]]
         then
-            echoGreenInfo "删除原/opt/dc1server.jar，重新下载"
+            echoGreenInfo "删除原/opt/dc1server/dc1server.jar，重新下载"
 	        rm -f /opt/dc1server/dc1server.jar
 	        wget ${JAR_URL}
         fi
@@ -59,11 +59,11 @@ function install(){
 	if test -e /opt/dc1server/dc1server.service
 	then
 	    echo ""
-		echo -n  "是否删除原/opt/dc1server.service，重新下载？【Y/N】"
+		echo -n  "是否删除原/opt/dc1server/dc1server.service，重新下载？【Y/N】"
         read  deleteOriServiceFile
         if [[ ${deleteOriServiceFile} == "Y" || ${deleteOriServiceFile} == "y" ]]
         then
-            echoGreenInfo "删除原/opt/dc1server.service，重新下载"
+            echoGreenInfo "删除原/opt/dc1server/dc1server.service，重新下载"
 	        rm -f /opt/dc1server/dc1server.service
 	        wget ${SERVICE_URL}
         fi
