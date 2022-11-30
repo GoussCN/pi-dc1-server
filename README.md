@@ -29,9 +29,11 @@ address=/aircat.phicomm.com/192.168.1.11
     (5)、打开按钮打开后，下方显示为“远程主机：192.168.4.1:7550”；  
     (6)、然后再数据发送输入框中输入如下代码：  
   
-{"header":"phi-plug-0001","uuid":"00010","action":"wifi=","uuid":"identify291f","auth":"","params":{"ssid":"WiFi名","password":"WiFi密码"}}  
+{"header":"phi-plug-0001","uuid":"00010","action":"wifi=","uuid":"identify291f","auth":"","params":{"ssid":"WiFi名称","password":"WiFi密码"}}  
 
 注意1，要修改成你自己WiFi的名字和密码，  
-注意2，要在上述内容后打个回车，然后再按发送。然后应该会收到如下配网成功的信息。  
+注意2，要在上述内容后按个回车后再按发送。然后应该会收到如下配网成功的信息。
+[Receive from 192.168.4.1:7550]:
+{"header":"phi-plug-0001","uuid":"00010","status":200,"msg":"set wifi=success","{"mac":"11:22:33:44:55:66"}}  
 #
-备注：所有代码源于网络，如有侵权请告知删除。
+说明：所有代码源于网络，如有侵权请告知删除。
