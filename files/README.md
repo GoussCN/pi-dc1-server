@@ -25,5 +25,5 @@ token配置文件/opt/dc1.conf，token=dc1server
 8000是dc1的数据端口  
 8800是手机端的推送端口  
 8880是手机端的http端口  
-在浏览器中打开以下网址：http://你的ip:8880/api/queryDeviceList?token=111  
+在浏览器中打开以下网址：http://ip:8880/api/queryDeviceList?token=111  
 如果显示结果如下，说明服务端已经启动{"code": 403,"message": "token验证失败！"}  
