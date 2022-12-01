@@ -5,6 +5,7 @@ After=network.target
 [Service]
 ExecStart=/usr/bin/java -jar /opt/dc1server.jar
 ExecReload=/bin/kill -USR1 $MAINPID
+StandardOutput=null
 Restart=always
 RestartSec=30
 StartLimitInterval=400
