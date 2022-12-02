@@ -1,23 +1,36 @@
-# systemctl启动服务时，配置日志输出控制;  
-# StandardOutput=null是将程序业务日志输出到空，也可以指定文件，或者交给journal处理，常见参数有： 
+# systemctl启动服务时，配置日志输出控制;
+# StandardOutput=null是将程序业务日志输出到空，也可以指定文件，或者交给journal处理，常见参数有;
 # StandardInput=null  
 # StandardOutput=inherit  
-# StandardError=inherit  
-# 如果取消StandardOutput=null，默认输出日志到/var/log/daemon,/var/log/syslog.  
+# StandardError=inherit 
+# 如果取消StandardOutput=null，默认输出日志到/var/log/daemon,/var/log/syslog
+# 注意，“StartLimitInterval”必须大于“RestartSec * StartLimitBurst”，否则服务将无限期重启;
 
 [Unit]
-Description=DC1 Service.d
+# 服务描述;
+Description=DC1 Service
+# after是在对应service之前运行的意思;
 After=network.target
 
 [Service]
+# 启动服务的命令;
 ExecStart=/usr/bin/java -jar /opt/dc1server.jar
+# 重启当前服务时执行的命令;
 ExecReload=/bin/kill -USR1 $MAINPID
+# 禁止日志输出;
 StandardOutput=null
+#定义自动重启服务器情况，always-总重启，on-success、on-failure、on-abnormal、on-abort、on-watchdog;
 Restart=always
+#自动重启当前服务间隔的秒数;
 RestartSec=30
-StartLimitInterval=400
+# 重启检测限制，设置时长限制;
+StartLimitInterval=200
+# 重启检测限制，设置次数;
 StartLimitBurst=5
-KillMode=process
+# 使用KillMode=mixed而不是KillMode=process，因为后者只会将final发送SIGKILL到您的主进程，这意味着您的子进程如果已锁定则不会被杀死;
+KillMode=mixed
 
 [Install]
+# 表示该服务所在的Target，Target含义是服务组;
 WantedBy=multi-user.target
+
