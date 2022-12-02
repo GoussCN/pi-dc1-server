@@ -1,10 +1,3 @@
-# systemctl启动服务时，配置日志输出控制;  
-# StandardOutput=null是将程序业务日志输出到空，也可以指定文件，或者交给journal处理，常见参数有： 
-# StandardInput=null  
-# StandardOutput=inherit  
-# StandardError=inherit  
-# 如果取消StandardOutput=null，默认输出日志到/var/log/daemon,/var/log/syslog.  
-
 [Unit]
 Description=DC1 Service
 After=network.target
@@ -15,9 +8,9 @@ ExecReload=/bin/kill -USR1 $MAINPID
 StandardOutput=null
 Restart=always
 RestartSec=30
-StartLimitInterval=400
+StartLimitInterval=200
 StartLimitBurst=5
-KillMode=process
+KillMode=mixed
 
 [Install]
 WantedBy=multi-user.target
