@@ -6,7 +6,7 @@
 # 如果取消StandardOutput=null，默认输出日志到/var/log/daemon,/var/log/syslog.  
 
 [Unit]
-Description=Dc1 Service
+Description=DC1 Service
 After=network.target
 
 [Service]
